@@ -6,8 +6,8 @@
     <a href="https://steamcommunity.com/id/tchakir/">
       <img src="https://img.shields.io/badge/Steam-blue?style=for-the-badge&logo=steam&logoColor=white" alt="Steam Badge"/>
     </a>
-    <a href="https://www.youtube.com/channel/UC6KzwcNA9-EPsGVvdr4zoqw">
-      <img src="https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube&logoColor=white" alt="Youtube Badge"/>
+    <a href="https://t.me/tchakir">
+      <img src="https://img.shields.io/badge/Telegram-blue?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram Badge"/>
     </a>
     <a href="https://vk.com/t_chakir">
       <img src="https://img.shields.io/badge/VK-blue?style=for-the-badge&logo=VK&logoColor=white" alt="VK Badge"/>
