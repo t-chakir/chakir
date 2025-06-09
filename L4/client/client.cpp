@@ -9,8 +9,6 @@
 // Реализация TCP клиента
 void clientTcp(){
 
-    std::cout << "Ingect Client" << std::endl;
-
     int clientSoket = socket(AF_INET, SOCK_STREAM, 0);
     if(clientSoket == -1){
         perror("Error soket");
@@ -23,7 +21,9 @@ void clientTcp(){
     clientAdd.sin_port = htons(2222);
     clientAdd.sin_addr.s_addr = INADDR_ANY;
 
-    // std::cout << "Server: " << inet_ntoa(clientAdd.sin_addr) << ":" << ntohs(clientAdd.sin_port) << std::endl;
+    std::cout << "Server: " << inet_ntoa(clientAdd.sin_addr) << ":" << ntohs(clientAdd.sin_port) << std::endl;
+    
+    // Подключение к серверу
     if(connect(clientSoket, (struct sockaddr*)&clientAdd, sizeof(clientAdd)) == -1){
         perror("Error connect");
         close(clientSoket);
@@ -33,19 +33,21 @@ void clientTcp(){
     while(true){
         std::string messege;
         std::cout << "Введите текст для вывода на сервер [" << i << "]: ";
-        
-        // std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         std::getline(std::cin, messege);
 
+        // Заносим данные на сервер
         if(send(clientSoket, messege.c_str(), messege.size(), 0) == -1){
             perror("Error send");
             close(clientSoket);
-            break;
+            continue;
         }
         i++;
 
-        if(messege == "Bay") break;
+        // Можно убрать но будет бесконесный цикл если хотите определить количесвто клиентво замените while(true) на for(...)
+        if(messege == "Bye!") break;
     }
+
+    // Закрывалем сокер клиента
     close(clientSoket);
 }
 
