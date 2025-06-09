@@ -9,7 +9,7 @@
 
 ## Запуск
 
-&emsp; Сначала запускаем сервер через `./srv.sh`. Затем клиента `./client.sh`.
+&emsp; Сначала запускаем сервер [`srv.cpp`](https://github.com/t-chakir/chakir/blob/main/L4/srv/srv.cpp) через [`./srv.sh`](https://github.com/t-chakir/chakir/blob/main/L4/srv/srv.sh). Затем клиента [`client.cpp`](https://github.com/t-chakir/chakir/blob/main/L4/client/client.cpp) через [`./client.sh`](https://github.com/t-chakir/chakir/blob/main/L4/client/client.sh).
 
 
 ## Что такое алгоритмы балансировки нагрузки?
